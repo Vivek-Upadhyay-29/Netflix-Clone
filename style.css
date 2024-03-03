@@ -1,0 +1,77 @@
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Libre+Baskerville&family=Martel+Sans:wght@200;300;400;600;700;800;900&display=swap')
+</style>
+
+*{
+    padding: 0%;
+    margin: 0%;
+}
+
+.main    {
+    position: relative;
+    background-position:center center;
+    background-repeat: no-repeat;
+    background size: max( 1200px ,100vw);
+    width: 100vw;
+    background-image: url(./assets/images/bg.jpg);
+    height: 80vh;
+}
+.main .box{
+    top: 0%;
+    position: absolute;
+    height: 80vh;
+    width: 100%;
+    opacity: 0.4;
+    background-color: black;
+}
+nav{
+    max-width: 80vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+    height: 60px;
+}
+nav .div{
+    color: rgb(254, 36, 36);
+    position: relative;
+    z-index: 10;
+    justify-content: end;
+}
+nav button{
+    position: relative;
+    z-index: 10;
+}
+.hero{
+    height: 100%;
+    display: flex;
+    font-family: "Martel Sans", sans-serif;
+    font-weight: 600;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+    position: relative;
+    gap: 23px;
+}
+.hero :first-child{
+    font-size: 40px;
+    font-weight: bolder;
+}
+.hero :nth-child(2){
+    font-weight: lighter;
+    font-size: 1.5rem;
+}
+.hero :nth-child(3){
+    font-weight: lighter;
+    font-size:  1.25rem;
+}
+#buton{
+    margin: auto;
+    padding: auto;
+    background-color: white;
+    border-radius: 4px;
+    color: white;
+    background: transparent;
+    bo
+}
