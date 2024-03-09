@@ -6,7 +6,9 @@
     padding: 0%;
     margin: 0%;
 }
-
+body{
+    background-color: black;
+}
 .main    {
     position: relative;
     background-position:center center;
@@ -14,12 +16,12 @@
     background size: max( 1200px ,100vw);
     width: 100vw;
     background-image: url(./assets/images/bg.jpg);
-    height: 80vh;
+    height: 70vh;
 }
 .main .box{
     top: 0%;
     position: absolute;
-    height: 80vh;
+    height: 70vh;
     width: 100%;
     opacity: 0.4;
     background-color: black;
@@ -53,25 +55,31 @@ nav button{
     color: white;
     position: relative;
     gap: 23px;
+    padding: 30px;
 }
-.hero :first-child{
+.hero> :first-child{
+    justify-content: center;
+    text-align: center;
     font-size: 40px;
     font-weight: bolder;
 }
-.hero :nth-child(2){
-    font-weight: lighter;
+.hero> :nth-child(2){
+    font-weight: bold;
     font-size: 1.5rem;
 }
 .hero :nth-child(3){
+    text-align: center;
     font-weight: lighter;
     font-size:  1.25rem;
 }
 #buton{
     margin: auto;
-    padding: auto;
     background-color: white;
     border-radius: 4px;
     color: white;
     background: transparent;
     bo
+}
+.hero div{
+   
 }
