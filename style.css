@@ -1,6 +1,5 @@
-<style>
 @import url('https://fonts.googleapis.com/css2?family=Bangers&family=Libre+Baskerville&family=Martel+Sans:wght@200;300;400;600;700;800;900&display=swap')
-</style>
+
 
 *{
     padding: 0%;
@@ -11,7 +10,7 @@ body{
 }
 .main    {
     position: relative;
-    background-position:center center;
+    background-position:center ;
     background-repeat: no-repeat;
     background size: max( 1200px ,100vw);
     width: 100vw;
@@ -23,7 +22,7 @@ body{
     position: absolute;
     height: 70vh;
     width: 100%;
-    opacity: 0.4;
+    opacity: 0.6;
     background-color: black;
 }
 nav{
@@ -45,7 +44,7 @@ nav button{
     z-index: 10;
 }
 .hero{
-    height: 100%;
+    height: calc(100% - 62px);
     display: flex;
     font-family: "Martel Sans", sans-serif;
     font-weight: 600;
@@ -55,7 +54,7 @@ nav button{
     color: white;
     position: relative;
     gap: 23px;
-    padding: 30px;
+    padding: 0px 30px;
 }
 .hero> :first-child{
     justify-content: center;
@@ -72,14 +71,38 @@ nav button{
     font-weight: lighter;
     font-size:  1.25rem;
 }
-#buton{
-    margin: auto;
-    background-color: white;
-    border-radius: 4px;
-    color: white;
-    background: transparent;
-    bo
+
+
+.seperation{
+    height: 7px;
+    background-color: grey;
+  
 }
-.hero div{
-   
+.btn{
+    padding: 3px 18px;
+    background-color:transparent;
+    color: white;
+    font-weight: bold;
+    border-color: white;
+    border-radius: 3px;
+}
+.btn-red{
+    font-family: "Martel Sans", sans-serif;
+    font-size: 18px;
+    padding: 15px 28px;
+    background-color: red;
+    color: white;
+    font-weight:500;
+    border-radius: 5px;
+}
+#email{
+    border: 1px solid white;
+    font-family: "Martel Sans", sans-serif;
+    margin-right: 5px;
+    border-radius: 6px;
+    color: white;
+    background-color: transparent;
+    font-size: 15px;
+    padding: 15px 58px;
+    padding-top: 18px;
 }
