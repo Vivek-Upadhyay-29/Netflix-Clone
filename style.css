@@ -1,108 +1,337 @@
-@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Libre+Baskerville&family=Martel+Sans:wght@200;300;400;600;700;800;900&display=swap')
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500;700;800&display=swap");
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
 
-*{
-    padding: 0%;
-    margin: 0%;
+body {
+    background-color: #000;
+    color: #fff;
 }
-body{
-    background-color: black;
-}
-.main    {
-    position: relative;
-    background-position:center ;
-    background-repeat: no-repeat;
-    background size: max( 1200px ,100vw);
-    width: 100vw;
-    background-image: url(./assets/images/bg.jpg);
-    height: 70vh;
-}
-.main .box{
-    top: 0%;
-    position: absolute;
-    height: 70vh;
+
+.header {
     width: 100%;
-    opacity: 0.6;
-    background-color: black;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0.1,0.7),rgba(0,0,0.1,0.7)), url(Images/backgroundimg1.jpg);
+    background-size: cover;
+    background-position: center;
+    padding: 10px 8%;
+    position: relative;
 }
-nav{
-    max-width: 80vw;
+
+nav {
     display: flex;
+    align-items: center;
     justify-content: space-between;
+    padding: 10px 0;
+}
+
+.logo {
+    width: 150px;
+    cursor: pointer;
+}
+
+nav button {
+    border: none;
+    outline: none;
+    background-color: #db0001;
+    color: #fff;
+    padding: 7px 20px;
+    font-size: 12px;
+    border-radius: 4px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.lang-btn {
+    display: inline-flex;
     align-items: center;
-    margin: auto;
-    height: 60px;
+    background: transparent;
+    border: 1px solid #fff;
+    padding: 7px 10px;
 }
-nav .div{
-    color: rgb(254, 36, 36);
-    position: relative;
-    z-index: 10;
-    justify-content: end;
+
+.lang-btn img {
+    width: 10px;
+    margin-left: 10px;
+} 
+
+.fa-globe {
+    color: #fff;
+    width: 10px;
+    margin-right: 10px;
 }
-nav button{
-    position: relative;
-    z-index: 10;
+
+.header-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    margin-top: 100px;
 }
-.hero{
-    height: calc(100% - 62px);
-    display: flex;
-    font-family: "Martel Sans", sans-serif;
+
+.header-content h1 {
+    font-size: 60px;
+    line-height: 70px;
     font-weight: 600;
-    justify-content: center;
+    max-width: 650px;
+}
+
+.header-content h3 {
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+.email-signup {
+    background: #fff;
+    border-radius: 4px;
+    display: flex;
     align-items: center;
-    flex-direction: column;
-    color: white;
-    position: relative;
-    gap: 23px;
-    padding: 0px 30px;
+    margin-top: 30px;
+    overflow: hidden;
 }
-.hero> :first-child{
-    justify-content: center;
+
+.email-signup input {
+    flex: 1;
+    border: 0;
+    outline: 0;
+    margin-left: 20px;
+}
+
+.email-signup button {
+    background-color: #db0001;
+    border: none;
+    outline: none;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    padding: 15px 30px;
+}
+
+
+.features {
+    padding: 50px 12%;
+    font-size: 22px;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    flex-wrap: wrap;
+    padding: 50px 0;
+}
+
+.text-col, .img-col {
+    flex-basis: 50%;
+    margin-bottom: 20px;
+}
+
+.img-col img {
+    display: block;
+    width: 90%;
+    margin: auto;
+}
+
+.features h2 {
+    font-size: 50px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.faq {
+    padding: 10px 12%;
     text-align: center;
+    font-size: 18px;
+}
+
+.faq h2 {
     font-size: 40px;
-    font-weight: bolder;
+    font-weight: 500;
 }
-.hero> :nth-child(2){
-    font-weight: bold;
-    font-size: 1.5rem;
+
+.accordion {
+    margin: 60px auto;
+    width: 100%;
+    max-width: 750px;
 }
-.hero :nth-child(3){
-    text-align: center;
-    font-weight: lighter;
-    font-size:  1.25rem;
+
+.accordion li {
+    list-style: none;
+    width: 100%;
+    padding: 5px;
+}
+
+.accordion li label {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    font-size: 18px;
+    font-weight: 500;
+    background-color: #303030;
+    margin-bottom: 2px;
+    cursor: pointer;
+    position: relative;
+}
+
+label::after {
+    content: '+';
+    font-size: 34px;
+    position: absolute;
+    right: 20px;
+    transition: transform 0.5s;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+.accordion .content {
+    background-color: #303030;
+    text-align: left;
+    padding: 0 20px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s, padding 0.5s;
+}
+
+.accordion input[type="radio"]:checked + label + .content {
+    max-height: 600px;
+    padding: 30px 20px;
+}
+
+.accordion input[type="radio"]:checked + label::after {
+    transform: rotate(135deg);
+}
+
+.faq small {
+    font-size: 13px;
+}
+
+.faq .email-signup {
+    max-width: 600px;
+    margin: 20px auto 60px;
 }
 
 
-.seperation{
-    height: 7px;
-    background-color: grey;
-  
+.footer {
+    padding: 50px 15% 10px;
+    border-top: 6px solid #333;
+    color: #777;
 }
-.btn{
-    padding: 3px 18px;
-    background-color:transparent;
-    color: white;
-    font-weight: bold;
-    border-color: white;
+
+.footer h2 {
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 30px;
+    color: #eddfdf;
+    text-decoration: underline;
+}
+
+.footer .col {
+    flex-basis: 25%;
+    flex-grow: 1;
+    margin-bottom: 20px;
+}
+
+.footer .col a {
+    display: block;
+    color: #eddfdf;
+    font-size: 14px;
+    margin-bottom: 10px;
+    text-decoration: none;
+}
+
+.footer .row {
+    align-items: flex-start;
+    padding: 10px 0px;
+}
+
+.footer .lang-btn {
+    color: #fff;
+    padding: 10px 20px;
     border-radius: 3px;
 }
-.btn-red{
-    font-family: "Martel Sans", sans-serif;
-    font-size: 18px;
-    padding: 15px 28px;
-    background-color: red;
-    color: white;
-    font-weight:500;
-    border-radius: 5px;
+
+.copyright-text {
+    font-size: 14px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    color: #eddfdf;
+    text-decoration: underline;
 }
-#email{
-    border: 1px solid white;
-    font-family: "Martel Sans", sans-serif;
-    margin-right: 5px;
-    border-radius: 6px;
-    color: white;
-    background-color: transparent;
-    font-size: 15px;
-    padding: 15px 58px;
-    padding-top: 18px;
+
+
+
+@media only screen and (max-width: 600px) {
+    .logo {
+        width: 100px;
+    }
+
+    nav button {
+        padding: 5px 10px;
+    }
+
+    nav .lang-btn {
+        padding: 4px 8px;
+    }
+
+    .header-content {
+        position: unset;
+        transform: none;
+        padding-top: 150px;
+    }
+
+    .header-content h1 {
+        font-size: 30px;
+    }
+
+    .email-signup button {
+        font-size: 12px;
+        padding: 10px 15px;
+    }
+
+    .text-col, .img-col {
+        flex-basis: 100%;
+    }
+
+    .features h2 {
+        font-size: 30px;
+    }
+
+    .features p {
+        font-size: 15px;
+    }
+
+    .row:nth-child(2), .row:nth-child(4) {
+        flex-direction: column-reverse;
+    }
+
+    .features .row {
+        padding: 10px 0;
+    }
+
+    .faq h2 {
+        font-size: 20px;
+    }
+
+    .accordion .content {
+        font-size: 14px;
+    }
+
+    .accordion li label {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    label::after {
+        font-size:22px;
+    }
+    
 }
+
+
